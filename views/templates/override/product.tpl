@@ -25,5 +25,5 @@
 {extends file='catalog/product.tpl'}
 
 {block name='product_prices'}
-	{include file='./catalog/_partials/product-prices.tpl'}
+	{include file="$branche_tpl_path"}
 {/block}
