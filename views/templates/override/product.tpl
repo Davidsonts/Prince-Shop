@@ -25,5 +25,5 @@
 {extends file='catalog/product.tpl'}
 
 {block name='product_prices'}
-	{include file="$branche_tpl_path"}
+	{include file="module:price_metreage_shop/views/templates/override/catalog/_partials/product-prices.tpl"}
 {/block}
