@@ -11,6 +11,3 @@
     <p class="product-without-taxes">{l s='%price% tax excl.' d='Shop.Theme.Catalog' sprintf=['%price%' => $product.price_tax_exc]}</p>
   {/if}
 {/block}
-
-
-

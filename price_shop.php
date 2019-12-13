@@ -45,14 +45,8 @@ class Price_Shop extends Module
     public function hookDisplayOverrideTemplate($params) {
         $controller = $params['controller'];
         
-        if (file_exists(_PS_MODULE_DIR_ . 'price_shop/views/templates/override/catalog/_partials/product-prices.tpl')){
-            $this->context->smarty->assign('branche_tpl_path', _PS_MODULE_DIR_ . 'price_shop/views/templates/override/catalog/_partials/product-prices.tpl');
-        }else{
-            $this->context->smarty->assign('branche_tpl_path', _PS_THEME_DIR_.'templates/catalog/_partials/product-prices.tpl');
-        }
-
         if ($controller->php_self == 'product') {
-            return dirname(__FILE__) . '/views/templates/override/product.tpl';
+            return 'module:price_shop/views/templates/override/product.tpl';
         }
     
         return false;
